@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "keri",
+  "version": "${version}",
+  "name": "Keri",
+  "description": "An AI Chat bot in Minecraft server",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/keri/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "fabric-datagen": [
+      "io.ula.keri.client.KeriDataGenerator"
+    ],
+    "main": [
+      "io.ula.keri.Keri"
+    ]
+  },
+  "mixins": [
+    "keri.mixins.json",
+    {
+      "config": "keri.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
