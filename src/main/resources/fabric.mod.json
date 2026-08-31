@@ -6,26 +6,19 @@
   "description": "An AI Chat bot in Minecraft server",
   "authors": [],
   "contact": {},
-  "license": "GPL-3.0",
-  "icon": "assets/keri/icon.png",
+  "license": "GPL-3.0"
   "environment": "server",
   "entrypoints": {
-    "fabric-datagen": [
-      "io.ula.keri.client.KeriDataGenerator"
-    ],
     "main": [
       "io.ula.keri.Keri"
     ]
   },
   "mixins": [
-    "keri.mixins.json",
-    {
-      "config": "keri.client.mixins.json",
-      "environment": "client"
-    }
+    "keri.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "${minecraft_version}",
+    "ula_api": ">=1.26.820"
   }
 }
